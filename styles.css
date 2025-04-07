@@ -1,62 +1,82 @@
+/* Space background and overall vibe */
 body {
-    font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-image: url('space-bg.png');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
 }
 
 .container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #5f5fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 15px #5f5fff;
     text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+h1 {
+    font-size: 1.8em;
+    color: #00ffff;
+    margin-bottom: 20px;
 }
 
 form {
     margin-bottom: 20px;
 }
 
-input[type="file"] {
-    margin: 10px 0;
-}
-
+input[type="file"],
 input[type="number"] {
     margin: 10px 0;
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #1a1a2e;
+    color: #fff;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    padding: 12px 24px;
+    background-color: #5f5fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    color: white;
     cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #7f7fff;
 }
 
 .feedback {
-    margin-top: 20px;
-    font-size: 1.2em;
-    color: #4CAF50;
+    font-size: 1.1em;
+    color: #00ffcc;
+    margin-top: 15px;
 }
 
+/* Shake animation for ranking */
 .shake {
-    animation: shake 0.5s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
+    animation: shake 0.5s ease-in-out 1;
 }
 
 @keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-10px); }
-    50% { transform: translateX(10px); }
-    75% { transform: translateX(-10px); }
-    100% { transform: translateX(0); }
+    0% { transform: translate(0px); }
+    25% { transform: translate(-5px); }
+    50% { transform: translate(5px); }
+    75% { transform: translate(-5px); }
+    100% { transform: translate(0px); }
 }
+
+/* Optional: fun font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
